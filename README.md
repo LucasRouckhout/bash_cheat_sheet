@@ -228,10 +228,9 @@ But as the manpage tells you, its the other way around.
 
 ## Get the n-th characters from every line.
 
-For example cut out the second character.
+For example get the second character.
 
 ```bash
-FILE="file"
 cut -c 2 $FILE
 ```
 
@@ -242,7 +241,6 @@ __NOTE__: You can always pipe the output of a command into `cut` so the input do
 For example get the first 3 characters from every line.
 
 ```bash
-FILE="file"
 cut -c -3 $FILE
 ```
 
@@ -254,7 +252,6 @@ For example give me the 5 remaining characters of every line.
 
 
 ```bash
-FILE="file"
 cut -c 5- $FILE
 ```
 
@@ -266,8 +263,7 @@ Words are delimited by spaces (the string " ") so you can do the following. Here
 we take the 4th word.
 
 ```bash
-FILE="file"
-cut -d " " -f 4
+cut -d " " -f 4 $FILE
 ```
 
 __NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
