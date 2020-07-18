@@ -14,10 +14,17 @@ and copy paste sollutions with some small adjustments over to get a working scri
   * [Reading a file line by line](#reading-a-file-line-by-line)
   * [Splitting a string into parts via a delimiter](#splitting-a-string-into-parts-via-a-delimiter)
 - [Conditionals](#conditionals)
-  * [Run a command conditionally (chaining)](#run-a-command-conditionally--chaining-)
+  * [Check if a file exists before using it](#check-if-a-file-exists-before-using-it)
+  * [Check if a array element exists at a certain index](#check-if-a-array-element-exists-at-a-certain-index)
+  * [Check if an array is empty](#check-if-an-array-is-empty)
 - [The Find command](#the-find-command)
   * [Find/list all the subdirectories of a directory](#find-list-all-the-subdirectories-of-a-directory)
   * [Find/list only files of a certain type.](#find-list-only-files-of-a-certain-type)
+- [The cut command](#the-cut-command)
+  * [Get the n-th characters from every line.](#get-the-n-th-characters-from-every-line)
+  * [Get the first n-th character from every line](#get-the-first-n-th-character-from-every-line)
+  * [Get the n-th remaining characters of every line](#get-the-n-th-remaining-characters-of-every-line)
+  * [Get the n-th word of every line.](#get-the-n-th-word-of-every-line)
 
 # Strings & File content
 
@@ -253,3 +260,14 @@ cut -c 5- $FILE
 
 __NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
 
+## Get the n-th word of every line.
+
+Words are delimited by spaces (the string " ") so you can do the following. Here
+we take the 4th word.
+
+```bash
+FILE="file"
+cut -d " " -f 4
+```
+
+__NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
