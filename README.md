@@ -13,7 +13,7 @@ and copy paste sollutions with some small adjustments over to get a working scri
 - [Strings & File content](#strings---file-content)
   * [Reading a file line by line](#reading-a-file-line-by-line)
   * [Splitting a string into parts via a delimiter](#splitting-a-string-into-parts-via-a-delimiter)
-- [Condiotionals](#condiotionals)
+- [Conditionals](#conditionals)
   * [Run a command conditionally (chaining)](#run-a-command-conditionally--chaining-)
 - [The Find command](#the-find-command)
 
@@ -44,7 +44,7 @@ done < "$FILE"
  * If the amount of delimited strings is greater then the ammount of provided variables then the rest will of the string
  will be appended to the last provided variable. In this case the `rest` variable.
 
-# Condiotionals
+# Conditionals
 
 ## Run a command conditionally (chaining)
 
