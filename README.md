@@ -73,7 +73,7 @@ but they are less readable. So the above statement could be written as follows.
 
 ```bash
 if [[ condition ]]; then
-	if [[ condition1 ]]; then
+	if [[ condition2 ]]; then
 		echo "Some code"
 	fi
 fi
