@@ -2,9 +2,14 @@
 
 A bash cheat sheet with code listings for common tasks.
 
+# Strings & File content
+
+This section covers the manipulation and processing of strings and file contents.
+
 ## Reading a file line by line
 
 ```bash
+FILE="filename"
 while IFE= read line; do
 	echo "$line"
 done < "$FILE"
@@ -24,6 +29,8 @@ done < "$FILE"
  * If the amount of delimited strings is greater then the ammount of provided variables then the rest will of the string
  will be appended to the last provided variable. In this case the `rest` variable.
 
+# Condiotionals
+
 ## Run a command conditionally (chaining)
 
 If you want to run a piece of code only when a logical condition is met do the following.
@@ -39,11 +46,23 @@ Example, only read a file when it exists then print out all the lines.
 ```
 
 These conditions can be chained. And will be checked in order.
+
 ```bash
 [[ condition ]] && [[ condition2 ]] && echo "Some code"
 ```
 
-## Find command 
+__NOTE__: These are all syntactical suger for the plain old if statement. You can always use nested if statements
+but they are less readable. So the above statement could be written as follows.
+
+```bash
+if [[ condition ]]; then
+	if [[ condition1 ]]; then
+		echo "Some code"
+	fi
+fi
+```
+
+# The Find command 
 
 This is a special one and technically does not belong here sinds the `find` command is not a shell-buitlin.
 But because it is so powerfull and used a lot in scripts a quick introduction is in order. The most basic usage of
