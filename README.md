@@ -1,6 +1,21 @@
 # Bash Cheat Sheet
 
-A bash cheat sheet with code listings for common tasks.
+A bash cheat sheet with code listings for common tasks. This document is a cookbook. It does not explain why you do things
+in depth it only shows you what to do. It is meant for people who already have some experience in bash and quickly need to
+hack something together. 
+
+The idea is that one can open this document on one monitor and open a text editor in the other one
+and copy paste sollutions with some small adjustments over to get a working script that does something.
+
+
+# Table of contents
+
+- [Strings & File content](#strings---file-content)
+  * [Reading a file line by line](#reading-a-file-line-by-line)
+  * [Splitting a string into parts via a delimiter](#splitting-a-string-into-parts-via-a-delimiter)
+- [Condiotionals](#condiotionals)
+  * [Run a command conditionally (chaining)](#run-a-command-conditionally--chaining-)
+- [The Find command](#the-find-command)
 
 # Strings & File content
 
