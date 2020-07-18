@@ -16,6 +16,8 @@ and copy paste sollutions with some small adjustments over to get a working scri
 - [Conditionals](#conditionals)
   * [Run a command conditionally (chaining)](#run-a-command-conditionally--chaining-)
 - [The Find command](#the-find-command)
+  * [Find/list all the subdirectories of a directory](#find-list-all-the-subdirectories-of-a-directory)
+  * [Find/list only files of a certain type.](#find-list-only-files-of-a-certain-type)
 
 # Strings & File content
 
@@ -127,19 +129,6 @@ find /dev -type d -print
 Using the `-type` predicate you can filter on the basis of file type. For a quick explanation on the syntax see 
 introduction to this section. For a quick explanation on the syntax see the introduction to this section [The Find command](#the-find-command).
 
-
-## Find/list only files of a certain type.
-
-For example find/list all the sockets in a directory.
-
-```bash
-find /run -type s -print
-```
-
-Using the `-type` predicate you can filter on the basis of file type. 
-
-For a quick explanation on the syntax see the introduction to this section [The Find command](#the-find-command).
-
 ## Find/list only files of a certain type.
 
 For example find/list all the sockets in a directory.
@@ -175,3 +164,4 @@ Using the `-type` predicate you can filter on the basis of file type.
               To  search  for more than one type at once, you can supply the combined list of type letters separated
               by a comma `,' (GNU extension).
 ```
+For a quick explanation on the syntax see the introduction to this section [The Find command](#the-find-command).
