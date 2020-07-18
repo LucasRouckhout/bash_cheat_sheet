@@ -193,3 +193,63 @@ Using the `-type` predicate you can filter on the basis of file type.
               by a comma `,' (GNU extension).
 ```
 For a quick explanation on the syntax see the introduction to this section [The Find command](#the-find-command).
+
+# The cut command
+
+Cut is not a shell builtin but can be found on most UNIX systems. The first line of the cut manpage says it all.
+```
+SYNOPSIS
+       cut OPTION... [FILE]...
+
+DESCRIPTION
+       Print selected parts of lines from each FILE to standard output.
+```
+
+What parts it cuts from every line depends on the options you give it. See `man cut` for a listing.
+
+__NOTE__: `cut` will cut from every line. So do not make the mistake of thinking that something like this
+
+```bash
+cut -c 1 file.txt
+```
+will only return the first character from the file. It returns the first character __of every line__ in the file.
+
+__TIP__: I found it handy to thing of the verb 'select' when thinking about the `cut` command. Because 
+cut will print out the characters you 'select' with your options. One would be forgiven for thinking that a command like 
+the one above prints out the lines with the first character cut out (because that is what it means to cut something out). 
+But as the manpage tells you, its the other way around. 
+
+## Get the n-th characters from every line.
+
+For example cut out the second character.
+
+```bash
+FILE="file"
+cut -c 2 $FILE
+```
+
+__NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
+
+## Get the first n-th character from every line
+
+For example get the first 3 characters from every line.
+
+```bash
+FILE="file"
+cut -c -3 $FILE
+```
+
+__NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
+
+## Get the n-th remaining characters of every line
+
+For example give me the 5 remaining characters of every line. 
+
+
+```bash
+FILE="file"
+cut -c 5- $FILE
+```
+
+__NOTE__: You can always pipe the output of a command into `cut` so the input does not have to be a file.
+
