@@ -48,19 +48,12 @@ done < "$FILE"
 
 # Conditionals
 
-## Run a command conditionally (chaining)
-
 If you want to run a piece of code only when a logical condition is met do the following.
 
 ```bash
 [[ condition ]] && echo "The condition was met"
 ```
 
-Example, only read a file when it exists then print out all the lines.
-
-```bash
-[[ -a $FILE ]] && while read -r line; do echo $line; done < $FILE
-```
 
 These conditions can be chained. And will be checked in order.
 
@@ -78,6 +71,41 @@ if [[ condition ]]; then
 	fi
 fi
 ```
+
+## Check if a file exists before using it
+
+Example, only read a file when it exists then print out all the lines.
+
+```bash
+[[ -a $FILE ]] && while read -r line; do echo $line; done < $FILE
+```
+
+## Check if a array element exists at a certain index
+
+You can check this by checking if the value at a certain index is equal to the the empty string.
+
+```bash
+array=()
+index=1
+
+[[ "${array[$index]}" == "" ]] && printf "The element at index %d was empty" "${index}"
+```
+
+## Check if an array is empty
+
+```bash
+array=()
+[[ ${#array[@]} -eq 0 ]] && echo "Array is empty"
+```
+
+You can also use arithmetic expansion.
+
+```bash
+array=()
+(( ${#array[@]} == 0 )) && echo "Array is empty"
+```
+
+There is some nuances to be noted here: https://serverfault.com/questions/477503/check-if-array-is-empty-in-bash
 
 # The Find command 
 
